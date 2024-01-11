@@ -177,11 +177,11 @@ build_new_vms() {
         while true; do
             sys_status="false"
             _green "What system does each virtual machine use? (Leave blank or enter debian11 if all use debian11):"
-            reading "每个虚拟机都使用什么系统？(若都使用debian11，则留空或输入debian11)：" system
+            reading "每个虚拟机都使用什么系统？(若都使用debian12，则留空或输入debian12)：" system
             if [ -z "$system" ]; then
-                system="debian11"
+                system="debian12"
             fi
-            systems=("debian10" "debian11" "debian9" "ubuntu18" "ubuntu20" "ubuntu22" "archlinux" "centos9-stream" "centos8-stream" "almalinux8" "almalinux9" "fedora33" "fedora34" "opensuse-leap-15")
+            systems=("debian12" "debian11" "debian10" "debian9" "ubuntu18" "ubuntu20" "ubuntu22" "archlinux" "centos9-stream" "centos8-stream" "almalinux8" "almalinux9" "fedora33" "fedora34" "opensuse-leap-15")
             for sys in ${systems[@]}; do
                 if [[ "$system" == "$sys" ]]; then
                     sys_status="true"
